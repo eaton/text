@@ -48,6 +48,8 @@
     "@sindresorhus/slugify": "^2.2.1",
     "@types/stopword": "^2.0.3",
     "filenamify": "^6.0.0",
+    "humanize-duration-ts": "^2.1.1",
+    "pretty-bytes": "^6.1.1",
     "stopword": "^3.0.1",
     "text-case": "^1.0.9",
     "title-case": "^4.3.1",
