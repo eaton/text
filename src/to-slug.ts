@@ -16,9 +16,12 @@ export function toSlug(input: string, options: SlugOptions = {}) {
     lowercase: true,
     separator: '-',
     stopwords: true,
-    customReplacements: [["'", ""]],
     ...options
   }
+
+  // Apostrophes? No way!
+  input = input.replaceAll("'", '');
+
   if (opt.stopwords) {
     if (opt.stopwords === true) {
       input = removeStopwords(input, true).join(' ');
