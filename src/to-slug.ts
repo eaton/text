@@ -16,6 +16,7 @@ export function toSlug(input: string, options: SlugOptions = {}) {
     lowercase: true,
     separator: '-',
     stopwords: true,
+    customReplacements: [["'", ""]],
     ...options
   }
   if (opt.stopwords) {
