@@ -12,6 +12,7 @@ The `toCase` export has a bunch of sub-functions that change a string's case. So
 
 ## Sanitizing
 
+- `undash()` and `straightenQuotes()` transform curly quotes and em dashes to simple low-ascii equivalents.
 - `toSlug(input: string)` returns a URL-safe version of a string, with common english stopwords stripped out.
 - `toFilename(input: string)` returns a string safe for use as a file name on Windows, MacOS, and UNIX.
 - `removeStopwords(input: string)` lowercases, sanitizes, and strips common english stopwords from any string. It returns the results as an array of strings.

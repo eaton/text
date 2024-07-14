@@ -1,0 +1,7 @@
+Encoded text file.
+
+"Smart quotes" and 'apostrophes' -- em dashes -- and accents.
+
+* Asterisk
+* Bullet
+- Dash
