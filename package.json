@@ -45,6 +45,7 @@
     "typescript": "^5.4.3"
   },
   "dependencies": {
+    "@eatonfyi/urls": "github:eaton/urls",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/stopword": "^2.0.3",
     "filenamify": "^6.0.0",

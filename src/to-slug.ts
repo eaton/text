@@ -2,7 +2,6 @@ import slugify, { Options } from '@sindresorhus/slugify';
 import { removeStopwords } from './remove-stopwords.js';
 
 export interface SlugOptions extends Options {
-  
   /**
    * Remove stopwords from the string before slugifying it. Defaults to TRUE,
    * removing common English words. Custom stopword lists can be passed in as an array.
@@ -19,6 +18,10 @@ export function toSlug(input: string, options: SlugOptions = {}) {
     stopwords: true,
     ...options
   }
+
+  // Apostrophes? No way!
+  input = input.replaceAll("'", '');
+
   if (opt.stopwords) {
     if (opt.stopwords === true) {
       input = removeStopwords(input, true).join(' ');
