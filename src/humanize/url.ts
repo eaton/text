@@ -1,4 +1,4 @@
-import { canParse, normalize, NormalizerOptions  } from "@eatonfyi/urls";
+import { NormalizedUrl, NormalizerOptions  } from "@eatonfyi/urls";
 import path from "path";
 
 export interface HumanizeUrlOptions extends NormalizerOptions {
@@ -13,7 +13,7 @@ const defaults: HumanizeUrlOptions = {
 
 export function url(input: string | URL, options: HumanizeUrlOptions = {}) {
   const opt = { ...defaults, ...options };
-  const url = normalize(input, opt);
+  const url = new NormalizedUrl(input, opt);
   if (url.subdomain === 'www') url.subdomain = undefined;
 
   let pathName = url.pathname.replace('/', '')

@@ -1,7 +1,7 @@
 {
   "name": "@eatonfyi/text",
   "version": "1.0.0",
-  "description": "String manipulation and and language-parsing tools.",
+  "description": "String manipulation and and language-manipulation tools used in the eaton.fyi migration.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -22,8 +22,7 @@
   ],
   "scripts": {
     "build": "pkgroll",
-    "clean": "shx rm -rf dist",
-    "prepare": "npm run clean && npm run build",
+    "package": "pkgroll --clean-dist --minify",
     "test": "ava"
   },
   "ava": {
@@ -34,18 +33,21 @@
       "--import=tsimp"
     ]
   },
-  "author": "eaton",
+  "author": "Jeff Eaton <jeff@eaton.fyi> (https://eaton.fyi)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eaton/fyi-ids.git"
+  },
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "ava": "^6.1.2",
-    "pkgroll": "^2.0.2",
-    "shx": "^0.3.4",
-    "tsimp": "^2.0.11",
-    "typescript": "^5.4.3"
+    "ava": "^6.2.0",
+    "pkgroll": "^2.6.0",
+    "tsimp": "^2.0.12",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@eatonfyi/urls": "github:eaton/urls",
+    "@eatonfyi/urls": "^1.2.1",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/stopword": "^2.0.3",
     "filenamify": "^6.0.0",
@@ -53,7 +55,6 @@
     "pretty-bytes": "^6.1.1",
     "stopword": "^3.0.1",
     "text-case": "^1.0.9",
-    "title-case": "^4.3.1",
-    "zod": "^3.22.4"
+    "title-case": "^4.3.1"
   }
 }
